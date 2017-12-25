@@ -4,7 +4,6 @@ body {
   color: #fff;
   font-family: Arial, sans-serif;
   text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
-  line-height: 16px;
   font-size: 16px;
   background-color: #000;
   background: url(../xmas_guide.png) top center no-repeat #000;
@@ -25,6 +24,14 @@ a:hover {
 }
 .emph {
   font-weight: bold;
+}
+
+.no-js-hide {
+  display: none;
+}
+
+.js-enabled .no-js-hide {
+  display: block;
 }
 
 .container, .content {
@@ -199,11 +206,15 @@ a:hover {
 .paints {
   position: absolute;
   width: 367px;
-  height: 362px;
+  height: 431px;
 }
 .paints .paint {
+  display: block;
   width: 367px;
-  height: 362px;
+  height: 431px;
+}
+.paints .paint.no-js-hide {
+  display: none;
 }
 .paints .paint .image {
   width: 367px;
@@ -211,24 +222,25 @@ a:hover {
 }
 .paints .paint .name {
   font-family: TF2Secondary;
-  position: absolute;
   font-size: 36px;
+  text-align: center;
 }
 .paints#hwn_paints {
   top: 421px;
   left: 195px;
 }
 .paints#hwn_paints .name {
-  margin-top: 40px;
-  margin-left: 64px;
+  margin-top: 30px;
 }
 .paints#xms_paints {
-  top: 589px;
+  top: 520px;
   left: 664px;
 }
-.paints#xms_paints .name {
-  margin-left: 48px;
-  margin-top: -59px;
+.paints#xms_paints .image {
+  margin-top: 32px;
+}
+.paints#xms_paints .munchable .name {
+  font-size: 34px;
 }
 
 #thanks {
@@ -242,7 +254,21 @@ a:hover {
 
 #text_credits {
   text-align: center;
-  position: relative;
+  position: absolute;
   top: 289px;
+  left: 354px;
   line-height: 22px;
+}
+
+#legal {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  bottom: 30px;
+  width: 888px;
+  height: 30px;
+  display: block;
+  background-image: url(../images/legal.png);
 }

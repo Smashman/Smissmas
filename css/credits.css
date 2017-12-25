@@ -1,0 +1,81 @@
+#credits {
+    top: 100px;
+    width: 626px;
+    position: relative;
+    margin: auto;
+    text-align: center;
+    left: auto;
+}
+#credits > .row {
+    width: 636px;
+    height: 80px;
+    margin-bottom: 8px;
+    position: relative;
+    float: left;
+}
+.row > div, .steam {
+    position: relative;
+    float: left;
+    margin-right: 10px;
+    padding: 4px;
+    border-radius: 4px;
+    text-align: left;
+    width: 300px;
+    height: 72px;
+    background: #0D0D13;
+}
+.row > div {
+    padding: 0;
+}
+.steam:hover {
+    background: #121626;
+}
+.row > div:last-child, .steam:last-child {
+    margin: 0 auto;
+    float: none;
+    display: inline-block;
+}
+.iconholder {
+    background: #e2aa71;
+    height: 64px;
+    width: 64px;
+    padding: 4px;
+    float: left;
+    border-radius: 3px;
+}
+.steam > .name {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: calc(100% - 72px);
+    color: #e2aa71;
+    padding-left: 13px;
+    line-height: 36px;
+    width: 185px;
+    font-size: 18px;
+    position: relative;
+    float: left;
+    overflow: hidden;
+    font-weight: bold;
+}
+.role {
+    position: relative;
+    float: left;
+    line-height: 36px;
+    width: 215px;
+    padding-left: 13px;
+    font-size: 14px;
+    color: #c9c9c8;
+}
+.role.long {
+    line-height: 18px;
+}
+
+.twitter {
+    position: absolute;
+    top: 8px;
+    right: 0;
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-image: url(../images/button_twitter.png);
+}
