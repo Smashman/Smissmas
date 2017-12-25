@@ -1,7 +1,7 @@
 body
     margin: 0
     padding: 0
-    color: #c9c9c8
+    color: #fff
     font-family: Arial, sans-serif
     text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25)
     line-height: 16px
@@ -10,10 +10,18 @@ body
     background: url(../xmas_guide.png) top center no-repeat #000
 
 a
-    color: #c9c9c8
+    color: #fff
+    text-decoration: none
 
 a:hover
-    color: #A0A6B5
+    color: #c9c9c8
+
+@font-face
+    font-family: TF2Secondary
+    src: url(../fonts/TF2Secondary.ttf)
+
+.emph
+    font-weight: bold
 
 ////////////////////////////
 // Containers and content //
@@ -35,10 +43,10 @@ a:hover
     height: 990px
     background-image: url(../images/xms_bg_2.jpg)
 #container_03, #content_03
-    height: 2635px
+    height: 2660px
     background-image: url(../images/xms_bg_3.jpg)
 #container_04, #content_04
-    height: 875px
+    height: 850px
     background-image: url(../images/xms_bg_4.jpg)
 #container_05, #content_05
     background-image: url(../images/xms_bg_5.jpg)
@@ -111,3 +119,94 @@ a:hover
 
 #turbine
     top: 1921px
+
+////////////
+// Taunts //
+////////////
+
+.taunt
+    position: absolute
+    font-size: 14px
+    .blurb
+        margin-bottom: 1em
+    .video
+        display: block
+        position: relative
+        width: 240px
+        height: 135px
+        margin-bottom: 1em
+    .created
+        width: 240px
+        position: absolute
+
+#accordion
+    left: 709px
+    top: 383px
+    .video
+        background-image: url(../images/taunt_accordion.jpg)
+
+#skate
+    left: 269px
+    top: 489px
+    .video
+        background-image: url(../images/taunt_skate.jpg)
+
+#pogo
+    left: 709px
+    top: 40px
+    .video
+        background-image: url(../images/taunt_pogo.jpg)
+
+#carpet
+    left: 709px
+    top: 842px
+    .video
+        background-image: url(../images/taunt_carpet.jpg)
+
+// Paints
+
+.paints
+    position: absolute
+    width: 367px
+    height: 362px
+    .paint
+        width: 367px
+        height: 362px
+        .image
+            width: 367px
+            height: 362px
+        .name
+            font-family: TF2Secondary
+            position: absolute
+            font-size: 36px
+
+    &#hwn_paints
+        top: 421px
+        left: 195px
+        .name
+            margin-top: 40px
+            margin-left: 64px
+    &#xms_paints
+        top: 589px
+        left: 664px
+        .name
+            margin-left: 48px
+            margin-top: -59px
+
+/////////////
+// Credits //
+/////////////
+
+#thanks
+    width: 780px
+    line-height: 22px
+    top: 1257px
+    margin: 0 auto
+    text-align: center
+    position: relative
+
+#text_credits
+    text-align: center
+    position: relative
+    top: 289px
+    line-height: 22px

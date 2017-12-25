@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  color: #c9c9c8;
+  color: #fff;
   font-family: Arial, sans-serif;
   text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
   line-height: 16px;
@@ -11,11 +11,20 @@ body {
 }
 
 a {
-  color: #c9c9c8;
+  color: #fff;
+  text-decoration: none;
 }
 
 a:hover {
-  color: #A0A6B5;
+  color: #c9c9c8;
+}
+
+@font-face {
+  font-family: TF2Secondary;
+  src: url(../fonts/TF2Secondary.ttf);
+}
+.emph {
+  font-weight: bold;
 }
 
 .container, .content {
@@ -40,12 +49,12 @@ a:hover {
 }
 
 #container_03, #content_03 {
-  height: 2635px;
+  height: 2660px;
   background-image: url(../images/xms_bg_3.jpg);
 }
 
 #container_04, #content_04 {
-  height: 875px;
+  height: 850px;
   background-image: url(../images/xms_bg_4.jpg);
 }
 
@@ -134,4 +143,106 @@ a:hover {
 
 #turbine {
   top: 1921px;
+}
+
+.taunt {
+  position: absolute;
+  font-size: 14px;
+}
+.taunt .blurb {
+  margin-bottom: 1em;
+}
+.taunt .video {
+  display: block;
+  position: relative;
+  width: 240px;
+  height: 135px;
+  margin-bottom: 1em;
+}
+.taunt .created {
+  width: 240px;
+  position: absolute;
+}
+
+#accordion {
+  left: 709px;
+  top: 383px;
+}
+#accordion .video {
+  background-image: url(../images/taunt_accordion.jpg);
+}
+
+#skate {
+  left: 269px;
+  top: 489px;
+}
+#skate .video {
+  background-image: url(../images/taunt_skate.jpg);
+}
+
+#pogo {
+  left: 709px;
+  top: 40px;
+}
+#pogo .video {
+  background-image: url(../images/taunt_pogo.jpg);
+}
+
+#carpet {
+  left: 709px;
+  top: 842px;
+}
+#carpet .video {
+  background-image: url(../images/taunt_carpet.jpg);
+}
+
+.paints {
+  position: absolute;
+  width: 367px;
+  height: 362px;
+}
+.paints .paint {
+  width: 367px;
+  height: 362px;
+}
+.paints .paint .image {
+  width: 367px;
+  height: 362px;
+}
+.paints .paint .name {
+  font-family: TF2Secondary;
+  position: absolute;
+  font-size: 36px;
+}
+.paints#hwn_paints {
+  top: 421px;
+  left: 195px;
+}
+.paints#hwn_paints .name {
+  margin-top: 40px;
+  margin-left: 64px;
+}
+.paints#xms_paints {
+  top: 589px;
+  left: 664px;
+}
+.paints#xms_paints .name {
+  margin-left: 48px;
+  margin-top: -59px;
+}
+
+#thanks {
+  width: 780px;
+  line-height: 22px;
+  top: 1257px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
+
+#text_credits {
+  text-align: center;
+  position: relative;
+  top: 289px;
+  line-height: 22px;
 }
