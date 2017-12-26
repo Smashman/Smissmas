@@ -19,7 +19,7 @@ a:hover {
 
 @font-face {
   font-family: TF2Secondary;
-  src: url(../fonts/TF2Secondary.ttf);
+  src: url(../fonts/TF2secondary.ttf);
 }
 .emph {
   font-weight: bold;
