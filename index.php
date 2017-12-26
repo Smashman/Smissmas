@@ -183,7 +183,7 @@
                     <div class="row">
                         <div>
                             <?php steam_block(87084440,"Thumbnail Design, SFM Renders & Web Assets",true);?>
-                            <a href="//twitter.com/mellowretro" class="button twitter" target="_blank"></a>
+                            <a href="//twitter.com/fuzzymellows" class="button twitter" target="_blank"></a>
                         </div>
                         <div>
                             <?php steam_block(33885066,"Management");?>
