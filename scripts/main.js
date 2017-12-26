@@ -17,6 +17,7 @@ $(function(){
     });
 
     $('#cauldron .slides').cycle({
+        log: false,
         fx:     'scrollHorz',
         speed:   200,
         next:   '> .next',
@@ -26,6 +27,7 @@ $(function(){
     });
 
     $('#stormy .slides').cycle({
+        log: false,
         fx:     'scrollHorz',
         speed:   200,
         next:   '> .next',
@@ -35,6 +37,7 @@ $(function(){
     });
 
     $('#spookey .slides').cycle({
+        log: false,
         fx:     'scrollHorz',
         speed:   200,
         next:   '> .next',
@@ -44,6 +47,7 @@ $(function(){
     });
 
     $('#turbine .slides').cycle({
+        log: false,
         fx:     'scrollHorz',
         speed:   200,
         next:   '> .next',
@@ -53,6 +57,7 @@ $(function(){
     });
 
     $('#hwn_paints .slides').cycle({
+        log: false,
         fx:     'scrollHorz',
         speed:   200,
         next:   '> .next',
@@ -63,6 +68,7 @@ $(function(){
     });
 
     $('#xms_paints .slides').cycle({
+        log: false,
         fx:     'scrollHorz',
         speed:   200,
         next:   '> .prev',
