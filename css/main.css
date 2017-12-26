@@ -6,7 +6,6 @@ body {
   text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
   font-size: 16px;
   background-color: #000;
-  background: url(../xmas_guide.png) top center no-repeat #000;
 }
 
 a {
@@ -35,7 +34,7 @@ a:hover {
 }
 
 .container, .content {
-  background: top center no-repeat;
+  background: top center no-repeat #000;
   height: 1500px;
 }
 
@@ -115,29 +114,69 @@ a:hover {
   background-image: url(../images/button_workshop.jpg);
 }
 
-.slider {
+.maps {
+  user-select: none;
   position: absolute;
   background-repeat: no-repeat;
+  display: block;
 }
-.slider.halloween {
+.maps .frame {
+  position: absolute;
+  z-index: 101;
+}
+.maps .slides {
+  position: absolute;
+}
+.maps .arrow {
+  top: 50%;
+}
+.maps.halloween {
   width: 1080px;
   height: 700px;
   left: 60px;
 }
-.slider.halloween .frame {
+.maps.halloween .frame {
   width: 1080px;
   height: 700px;
   background-image: url(../images/maps/hwn_frame.png);
 }
-.slider.xmas {
+.maps.halloween .slides {
+  top: 75px;
+  left: 59px;
+}
+.maps.halloween .image {
+  width: 960px;
+  height: 564px;
+}
+.maps.halloween .arrow.next {
+  right: 6px;
+}
+.maps.halloween .arrow.prev {
+  left: 6px;
+}
+.maps.xmas {
   width: 1040px;
   height: 730px;
   left: 80px;
 }
-.slider.xmas .frame {
+.maps.xmas .frame {
   width: 1040px;
   height: 730px;
   background-image: url(../images/maps/xmas_frame.png);
+}
+.maps.xmas .slides {
+  top: 76px;
+  left: 34px;
+}
+.maps.xmas .image {
+  width: 970px;
+  height: 570px;
+}
+.maps.xmas .arrow.next {
+  right: 10px;
+}
+.maps.xmas .arrow.prev {
+  left: 10px;
 }
 
 #stormy {
@@ -152,6 +191,26 @@ a:hover {
   top: 1921px;
 }
 
+.arrow {
+  width: 35px;
+  height: 40px;
+  background-repeat: no-repeat;
+  position: absolute;
+  cursor: pointer;
+  opacity: 0.3;
+  z-index: 102;
+  transform: translate(0, -50%);
+}
+.arrow:hover {
+  opacity: 1;
+}
+.arrow.next {
+  background-image: url(../images/next.png);
+}
+.arrow.prev {
+  background-image: url(../images/previous.png);
+}
+
 .taunt {
   position: absolute;
   font-size: 14px;
@@ -159,7 +218,7 @@ a:hover {
 .taunt .blurb {
   margin-bottom: 1em;
 }
-.taunt .video {
+.taunt .taunt_vid {
   display: block;
   position: relative;
   width: 240px;
@@ -175,7 +234,7 @@ a:hover {
   left: 709px;
   top: 383px;
 }
-#accordion .video {
+#accordion .taunt_vid {
   background-image: url(../images/taunt_accordion.jpg);
 }
 
@@ -183,7 +242,7 @@ a:hover {
   left: 269px;
   top: 489px;
 }
-#skate .video {
+#skate .taunt_vid {
   background-image: url(../images/taunt_skate.jpg);
 }
 
@@ -191,7 +250,7 @@ a:hover {
   left: 709px;
   top: 40px;
 }
-#pogo .video {
+#pogo .taunt_vid {
   background-image: url(../images/taunt_pogo.jpg);
 }
 
@@ -199,19 +258,48 @@ a:hover {
   left: 709px;
   top: 842px;
 }
-#carpet .video {
+#carpet .taunt_vid {
   background-image: url(../images/taunt_carpet.jpg);
 }
 
+#shade {
+  background: rgba(0, 0, 0, 0.75);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+}
+
+#zoomholder {
+  position: fixed;
+  background: #383757;
+  width: 854px;
+  height: 480px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 6px;
+  border-radius: 12px;
+}
+
+.video {
+  width: 854px;
+  height: 480px;
+}
+
 .paints {
+  user-select: none;
   position: absolute;
-  width: 367px;
+  width: 402px;
   height: 431px;
 }
 .paints .paint {
   display: block;
   width: 367px;
   height: 431px;
+  margin-left: 35px;
 }
 .paints .paint.no-js-hide {
   display: none;
@@ -224,23 +312,33 @@ a:hover {
   font-family: TF2Secondary;
   font-size: 36px;
   text-align: center;
+  height: 72px;
+  line-height: 72px;
+  padding-right: 55px;
+  padding-left: 12px;
+}
+.paints .paint .name.dl {
+  line-height: 36px;
+}
+.paints .arrow.next {
+  right: 10px;
+}
+.paints .arrow.prev {
+  left: 0px;
 }
 .paints#hwn_paints {
   top: 421px;
-  left: 195px;
+  left: 160px;
 }
-.paints#hwn_paints .name {
-  margin-top: 30px;
+.paints#hwn_paints .arrow {
+  bottom: -2%;
 }
 .paints#xms_paints {
   top: 520px;
-  left: 664px;
+  left: 629px;
 }
-.paints#xms_paints .image {
-  margin-top: 32px;
-}
-.paints#xms_paints .munchable .name {
-  font-size: 34px;
+.paints#xms_paints .arrow {
+  top: 8%;
 }
 
 #thanks {

@@ -6,7 +6,6 @@ body
     text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25)
     font-size: 16px
     background-color: #000
-    background: url(../xmas_guide.png) top center no-repeat #000
 
 a
     color: #fff
@@ -33,8 +32,7 @@ a:hover
 ////////////////////////////
 
 .container, .content
-    // background: top center no-repeat #000
-    background: top center no-repeat
+    background: top center no-repeat #000
     height: 1500px
 .content
     width: 1200px
@@ -96,9 +94,18 @@ a:hover
 // Sliders //
 /////////////
 
-.slider
+.maps
+    user-select: none
     position: absolute
     background-repeat: no-repeat
+    display: block
+    .frame
+        position: absolute
+        z-index: 101 // Because people don't know how z-index works...
+    .slides
+        position: absolute
+    .arrow
+        top: 50%
     &.halloween
         width: 1080px
         height: 700px
@@ -107,6 +114,18 @@ a:hover
             width: 1080px
             height: 700px
             background-image: url(../images/maps/hwn_frame.png)
+        .slides
+            top: 75px
+            left: 59px
+        .image
+            width: 960px
+            height: 564px
+        .arrow
+            $distance: 6px
+            &.next
+                right: $distance
+            &.prev
+                left: $distance
     &.xmas
         width: 1040px
         height: 730px
@@ -115,6 +134,18 @@ a:hover
             width: 1040px
             height: 730px
             background-image: url(../images/maps/xmas_frame.png)
+        .slides
+            top: 76px
+            left: 34px
+        .image
+            width: 970px
+            height: 570px
+        .arrow
+            $distance: 10px
+            &.next
+                right: $distance
+            &.prev
+                left: $distance
 
 #stormy
     top: 640px
@@ -125,6 +156,23 @@ a:hover
 #turbine
     top: 1921px
 
+.arrow
+    width: 35px
+    height: 40px
+    background-repeat: no-repeat
+    position: absolute
+    cursor: pointer
+    opacity: 0.3
+    z-index: 102
+    transform: translate(0, -50%)
+    &:hover
+        opacity: 1
+    &.next
+        background-image: url(../images/next.png)
+    &.prev
+        background-image: url(../images/previous.png)
+
+
 ////////////
 // Taunts //
 ////////////
@@ -134,7 +182,7 @@ a:hover
     font-size: 14px
     .blurb
         margin-bottom: 1em
-    .video
+    .taunt_vid
         display: block
         position: relative
         width: 240px
@@ -147,37 +195,65 @@ a:hover
 #accordion
     left: 709px
     top: 383px
-    .video
+    .taunt_vid
         background-image: url(../images/taunt_accordion.jpg)
 
 #skate
     left: 269px
     top: 489px
-    .video
+    .taunt_vid
         background-image: url(../images/taunt_skate.jpg)
 
 #pogo
     left: 709px
     top: 40px
-    .video
+    .taunt_vid
         background-image: url(../images/taunt_pogo.jpg)
 
 #carpet
     left: 709px
     top: 842px
-    .video
+    .taunt_vid
         background-image: url(../images/taunt_carpet.jpg)
 
-// Paints
+#shade
+    background: rgba(0, 0, 0, 0.75)
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    display: none
+
+#zoomholder
+    position: fixed
+    background: #383757
+    width: 854px
+    height: 480px
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    padding: 6px
+    border-radius: 12px
+
+.video
+    width: 854px
+    height: 480px
+
+////////////
+// Paints //
+////////////
 
 .paints
+    user-select: none
     position: absolute
-    width: 367px
+    width: 402px
     height: 431px
     .paint
         display: block
         width: 367px
         height: 431px
+        margin-left: 35px
         &.no-js-hide
             display: none
         .image
@@ -187,20 +263,28 @@ a:hover
             font-family: TF2Secondary
             font-size: 36px
             text-align: center
+            height: 72px
+            line-height: 72px
+            padding-right: 55px
+            padding-left: 12px
+            &.dl
+                line-height: 36px
+    .arrow
+        &.next
+            right: 10px
+        &.prev
+            left: 0px
 
     &#hwn_paints
         top: 421px
-        left: 195px
-        .name
-            margin-top: 30px
+        left: 160px
+        .arrow
+            bottom: -2%
     &#xms_paints
         top: 520px
-        left: 664px
-        .image
-            margin-top: 32px
-        .munchable
-            .name
-                font-size: 34px
+        left: 629px
+        .arrow
+            top: 8%
 
 /////////////
 // Credits //
